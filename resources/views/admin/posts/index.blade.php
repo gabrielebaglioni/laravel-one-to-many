@@ -36,13 +36,15 @@
                             @endif
                         </td>
                         <td>
-                            <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary">Visualizza</a>
-                            <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning">Modifica</a>
-                            <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                                <button type="submit" class="btn btn-danger">Cancella</button>
-                            </form>
+                            <div class="d-flex">
+                                <a href="{{route('admin.posts.show', $post->id)}}" class="btn btn-primary mx-1">Visualizza</a>
+                                <a href="{{route('admin.posts.edit', $post->id)}}" class="btn btn-warning mx-1">Modifica</a>
+                                <form action="{{route('admin.posts.destroy', $post->id)}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger">Cancella</button>
+                                </form>
+                            </div>
                         </td>                    
                     </tr>
                     @endforeach
