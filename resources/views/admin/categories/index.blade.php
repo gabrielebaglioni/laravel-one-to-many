@@ -25,9 +25,9 @@
                         <td>{{$category->id}}</td>
                         <td>{{$category->name}}</td>
                         <td>{{$category->slug}}</td>
-                        <td>
-                            <a href="{{route('admin.categories.show', $category->id)}}" class="btn btn-primary">Visualizza</a>
-                            <a href="{{route('admin.categories.edit', $category->id)}}" class="btn btn-warning">Modifica</a>
+                        <td class="d-flex">
+                            <a href="{{route('admin.categories.show', $category->id)}}" class="btn btn-primary mx-1">Visualizza</a>
+                            <a href="{{route('admin.categories.edit', $category->id)}}" class="btn btn-warning mx-1">Modifica</a>
                             <form action="{{route('admin.categories.destroy', $category->id)}}" method="POST">
                                 @csrf
                                 @method('DELETE')
